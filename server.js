@@ -1,10 +1,9 @@
 const http = require("http");
-const os = require("os"); 
 
-let username = os.userInfo().username;
+const greeting = require("./modules/greeting")
 
 http.createServer(function(request, response) {
     response.end("Hello Nodejs!");
 }).listen(3000, "127.0.0.1", function() {
-    console.log(`Server user is ${username}!`)
+    console.log(`Server is listening on 3000 port!`)
 });
