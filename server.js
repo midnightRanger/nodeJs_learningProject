@@ -8,6 +8,12 @@ const greeting = require("./modules/greeting")
 
 var helloMsg = greeting.getMessage(username)
 
+//User Constuctor
+const User = require("./models/user")
+
+let ivan = new User("Ivan", 14);
+ivan.displayInfo();
+
 http.createServer(function(request, response) {
     response.end(helloMsg);
 }).listen(3000, "127.0.0.1", function() {
